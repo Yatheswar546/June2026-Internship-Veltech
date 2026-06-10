@@ -1,0 +1,267 @@
+/* h2 {
+    color: green;
+    border: 3px solid orange;
+} */
+
+/************** SELECTORS ******************/
+/* .class {
+    color: blue;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.class2 {
+    color: blueviolet;
+}
+
+#id {
+    color: rgb(255, 30, 0);
+    border: 3px solid #07db27;
+} */
+
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+
+.class1, .class2, #id {
+    color: red;
+    border: 3px solid black;
+}
+
+/************** COLORS ******************/
+
+.color {
+    color: blue;
+}
+
+.rgb {
+    color: rgb(13, 8, 147);
+}
+
+.hex {
+    color: #f233de;
+    color: #123;
+}
+
+/************** BOX MODEL ******************/
+.box1 {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px;
+    width: 100px;
+    height: 200px;
+
+    padding-left: 100px;
+
+    padding: 30px;
+    padding: 0px 30px;
+    padding: 0px 30px 20px;
+    padding: 10px 20px 30px 40px;
+
+    background-color: blue;
+    color: #fff;
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 0;
+    margin-left: 150px;
+
+    margin-top: -40px;
+}
+
+/************** DISPLAY ******************/
+
+/* DISPLAY : BLOCK */
+.block {
+    height: 100px;
+    width: 500px;
+    font-size: 24px;
+}
+
+.block1 {
+    background-color: #f233de;
+    display: block;
+}
+
+.block2 {
+    background-color: #33e2f2;
+    display: block;
+}
+
+.block3 {
+    background-color: #33f236;
+    display: block;
+}
+
+.block4 {
+    background-color: #3363f2;
+    display: block;
+}
+
+.block5 {
+    background-color: #f23d33;
+    display: block;
+}
+
+/* DISPLAY : INLINE */
+.inline {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    /* padding: 10px; */
+    border: 1px solid #000;
+    /* font-size: 24px; */
+}
+
+.inline1 {
+    background-color: #f233de;
+    display: inline;
+}
+
+.inline2 {
+    background-color: #33e2f2;
+    display: inline;
+}
+
+.inline3 {
+    background-color: #33f236;
+    display: inline;
+}
+
+.inline4 {
+    background-color: #3363f2;
+    display: inline;
+}
+
+.inline5 {
+    background-color: #f23d33;
+    display: inline;
+}
+
+/* DISPLAY : INLINE-BLOCK */
+.inline-block {
+    height: 100px;
+    width: 80px;
+    border: 1px solid #000;
+    font-size: 18px;
+}
+
+.inline-block1 {
+    background-color: #f233de;
+    display: inline-block;
+}
+
+.inline-block2 {
+    background-color: #33e2f2;
+    display: inline-block;
+}
+
+.inline-block3 {
+    background-color: #33f236;
+    display: inline-block;
+}
+
+.inline-block4 {
+    background-color: #3363f2;
+    display: inline-block;
+}
+
+.inline-block5 {
+    background-color: #f23d33;
+    display: inline-block;
+}
+
+/* DISPLAY : NONE */
+.parent {
+    display: none;
+    display: block;
+}
+
+.parent .inline-block1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/************** POSITIONS ******************/
+
+.static {
+    position: static;
+}
+
+.fixed {
+    position: fixed;
+    /* top: 200px; */
+    /* bottom: 10px; */
+    /* left: 100px; */
+    right: 100px;
+}
+
+.sticky {
+    color: red;
+    font-size: 20px;
+
+    position: sticky;
+    top: 100px;
+}
+
+.sticky2 {
+    color: blue;
+    top: 200px;
+}
+
+.relative {
+    position: relative;
+    top: 200px;
+    /* left: 200px; */
+    /* right: 100px; */
+    /* bottom: 100px; */
+
+    /* width: 30%; */
+    /* border: 2px dashed red; */
+}
+
+.parent1 {
+    position: relative;
+    top: 100px;
+    right: 0px;
+    width: 300px;
+    height: 300px;
+    border: 3px solid red;
+}
+
+.child1 {
+    position: absolute;
+    top: 100px;
+    /* right: 10px; */
+
+    /* bottom: 0px; */
+    /* left: 60px; */
+
+    width: 100px;
+    height: 75px;
+    border: 2px solid blue;
+}
+
+.child2 {
+    position: absolute;
+    left: 100px;
+    width: 100px;
+    height: 75px;
+    border: 2px solid green;
+}
+
+.absolute {
+    position: absolute;
+    /* top: 100px; */
+    right: 100px;
+    width: 250px;
+    height: 250px;
+    border: 2px solid red;
+}

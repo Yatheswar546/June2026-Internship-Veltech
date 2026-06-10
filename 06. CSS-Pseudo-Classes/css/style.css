@@ -1,0 +1,148 @@
+
+/***************** Pseudo Classes **************/
+.btn {
+    border: 1px solid #000;
+    height: 80px;
+    width: 150px;
+    margin: 10px;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* .btn:hover {
+    cursor: pointer;
+    background-color: aqua;
+    color: red;
+
+    height: 120px;
+    width: 200px;
+} */
+
+/* .btn:active {
+    background-color: blue;
+} */
+
+.btn:focus {
+    background-color: pink;
+    color: yellow;
+}
+
+input:focus {
+    border: 2px solid blue;
+    background-color: #4b8cc9;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:focus {
+    color: darkmagenta;
+    font-size: 28px;
+}
+
+/*
+    "hover" is universal i.e. it can work with buttons/links
+    but "focus" and "active" are not universal
+
+    :focus  - input / links
+    :active - links /  buttons
+*/
+
+
+/***************** Pseudo Elements **************/
+.parent {
+    margin: 10px;
+    border: 2px solid red;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.child {
+    width: 60px;
+    padding: 10px;
+    margin: 10px;
+    background-color: coral;
+}
+
+/* .parent .child.hello3 {
+    background-color: chartreuse;
+} */
+
+.parent .child:first-child {
+    background-color: chartreuse;
+}
+
+.parent .child:last-child {
+    background-color: rgb(255, 0, 217);
+}
+
+.parent .child:nth-child(3) {
+    background-color: rgb(221, 255, 0);
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.appending-data::after {
+    content: ' Developer';
+    color: blue;
+}
+
+.appending-data::before {
+    content: 'Hello ';
+    color: red;
+}
+
+
+.shape {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #000;
+
+    margin: 10px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgb(43, 99, 230);
+
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.shape::before {
+    display: block;
+    height: 70px;
+    width: 70px;
+    border: 2px solid #000;
+
+    padding: 10px;
+    border-radius: 100%;
+    background-color: darkorange;
+
+    content: '';
+
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+
+.shape::after {
+    display: block;
+    height: 70px;
+    width: 70px;
+    border: 2px solid #000;
+
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgb(26, 255, 0);
+
+    content: '';
+
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+}
