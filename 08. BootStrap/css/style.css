@@ -1,0 +1,18 @@
+.pravishree {
+    color: blueviolet;
+}
+
+.relative-example {
+    border: 2px solid #000;
+    height: 400px;
+    width: 500px;
+}
+
+.relative-example div {
+    font-size: 24px;
+}
+
+.fixed-example {
+    top: 20%;
+    left: 25%;
+}

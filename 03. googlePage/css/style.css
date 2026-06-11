@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Ole&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Iosevka Charon", monospace;
 }
 
 body {
@@ -30,6 +33,9 @@ body {
 .right ul li a {
     text-decoration: none;
     color: #000;
+    font-family: "Ole", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .right {
@@ -106,7 +112,7 @@ form button {
     padding: 10px;
 }
 
-.search li:hover{
+.search li:hover {
     background-color: cornflowerblue;
     border-radius: 10px;
 }
@@ -124,7 +130,7 @@ form button {
 /************ RESPONSIVENESS *********/
 
 @media screen and (max-width:1050px) {
-    
+
     form {
         width: calc(100% - 220px);
     }
@@ -135,7 +141,7 @@ form button {
 }
 
 @media (max-width: 600px) {
-    
+
     form {
         width: calc(100% - 100px);
     }
