@@ -1,28 +1,32 @@
-
 /***************** Pseudo Classes **************/
-.btn {
-    border: 1px solid #000;
-    height: 80px;
-    width: 150px;
-    margin: 10px;
-    padding: 8px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 900;
+.heading:hover {
+    color: darkred;
+    background-color: rgb(237, 227, 170);
 }
 
-/* .btn:hover {
+.btn {
+    height: 80px;
+    width: 150px;
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn:hover {
     cursor: pointer;
-    background-color: aqua;
-    color: red;
+    background-color: antiquewhite;
+    color: blue;
 
     height: 120px;
     width: 200px;
-} */
+}
 
-/* .btn:active {
-    background-color: blue;
-} */
+.btn:active {
+    background-color: aqua;
+    height: 80px;
+    width: 150px;
+}
 
 .btn:focus {
     background-color: pink;
@@ -31,7 +35,7 @@
 
 input:focus {
     border: 2px solid blue;
-    background-color: #4b8cc9;
+    background-color: bisque;
 }
 
 a {
@@ -40,7 +44,7 @@ a {
 }
 
 a:focus {
-    color: darkmagenta;
+    color: blueviolet;
     font-size: 28px;
 }
 
@@ -52,11 +56,10 @@ a:focus {
     :active - links /  buttons
 */
 
-
 /***************** Pseudo Elements **************/
 .parent {
     margin: 10px;
-    border: 2px solid red;
+    border: 2px solid #000;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -69,52 +72,108 @@ a:focus {
     background-color: coral;
 }
 
-/* .parent .child.hello3 {
-    background-color: chartreuse;
-} */
-
 .parent .child:first-child {
     background-color: chartreuse;
 }
 
-.parent .child:last-child {
-    background-color: rgb(255, 0, 217);
+.child:last-child {
+    width: 100px;
+    font-style: italic;
+    background-color: aqua;
 }
 
-.parent .child:nth-child(3) {
-    background-color: rgb(221, 255, 0);
-    border-radius: 20px;
-    font-weight: 800;
+.child:nth-child(3) {
+    background-color: blueviolet;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
 }
 
 .appending-data::after {
     content: ' Developer';
-    color: blue;
+    color: red;
 }
 
 .appending-data::before {
     content: 'Hello ';
-    color: red;
+    color: blue;
 }
-
 
 .shape {
     height: 100px;
     width: 100px;
     border: 2px solid #000;
-
-    margin: 10px;
-    padding: 10px;
     border-radius: 100%;
-    background-color: rgb(43, 99, 230);
+
+    margin-left: 100px;
+    padding: 10px;
+    background-color: rgb(42, 42, 243);
 
     position: relative;
-    top: 30px;
-    left: 50px;
+
+    /* opacity: 0.6; */
+
 }
 
+
 .shape::before {
-    display: block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #000;
+
+    padding: 10px;
+    border-radius: 100%;
+    background-color: darkorange;
+
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    left: -90px;
+
+    /* opacity: 0.6; */
+}
+
+.shape::after {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #000;
+
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgb(13, 255, 0);
+
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    right: -90px;
+
+    /* opacity: 0.6; */
+}
+
+/* .shape,
+.shape::before,
+.shape::after {
+    background-color: transparent;
+} */
+
+.newShape {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #000;
+    border-radius: 100%;
+
+    margin-top: 50px;
+    margin-left: 100px;
+    padding: 10px;
+    background-color: rgb(42, 42, 243);
+
+    position: relative;
+}
+
+
+.newShape::before {
     height: 70px;
     width: 70px;
     border: 2px solid #000;
@@ -127,18 +186,17 @@ a:focus {
 
     position: absolute;
     top: -30px;
-    left: -30px;
+    left: -50px;
 }
 
-.shape::after {
-    display: block;
+.newShape::after {
     height: 70px;
     width: 70px;
     border: 2px solid #000;
 
     padding: 10px;
     border-radius: 100%;
-    background-color: rgb(26, 255, 0);
+    background-color: rgb(13, 255, 0);
 
     content: '';
 
