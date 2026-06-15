@@ -151,7 +151,7 @@ let date = new Date();  // built-in constructor function (class-like object)
 // console.log(func);
 // console.log(typeof(func));
 
-// console.log(date);
+console.log(date);
 // console.log(typeof(date));
 
 /***************** Js Operators *****************/  
