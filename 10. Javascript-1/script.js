@@ -6,7 +6,6 @@
     4) .innerHTML
 */
 
-
 // console.log("Hello Everyone, This is console tab");
 // alert("This is alert");
 // document.write("Hello, I am document.write()");
