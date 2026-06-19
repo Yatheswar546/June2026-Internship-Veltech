@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - 6 - DOM</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <!-- <a href="www.w3schools.com">W3 Schools</a> -->
+
+
+    <!-- 
+        Js - DOM (Document Object Model)
+
+        JavaScript does NOT directly understand HTML. JavaScript understand datatype
+        It treats HTML as a document object
+        HTML in terms of Js is a document
+
+        When a web page is loaded, the browser creates a Document Object Model of the page.
+        
+        The DOM (Document Object Model) is a programming interface for web pages.
+            => It represents HTML as a tree structure
+            => JavaScript uses the DOM to access and modify HTML
+            => DOM is object-oriented 
+
+        DOM Representation:
+
+                            Document
+                               |
+                            Root <html>
+                _______________|_______________
+                |                             |
+              <head>                        <body>
+                |                     ________|________
+              <title>                 |               |
+                |                    <h1>            <a>
+              "My Title"              |               |
+                                    Text            href
+
+
+        With DOM, JavaScript gets all the power it needs to create dynamic HTML:
+
+            => JavaScript can change all the HTML elements in the page
+            => JavaScript can change all the HTML attributes in the page
+            => JavaScript can change all the CSS styles in the page
+            => JavaScript can remove existing HTML elements and attributes
+            => JavaScript can add new HTML elements and attributes
+            => JavaScript can react to all existing HTML events in the page
+            => JavaScript can create new HTML events in the page
+    -->
+
+    <!-- 
+        1) Select HTML Elements
+            
+            (i) Traditional Methods
+                    getElementById()
+                    getElementByTagName()
+                    getElementByClassName()
+
+            (ii) Modern Methods
+                Query Selectors: css selectors to select HTML elements
+
+                    querySelector() - selects 1st element of class
+                    querySelectorAll() - selects all elements of class
+    -->
+
+    <h1 id=title>JavaScript Session 6</h1>
+    <h1 id=title>DOM</h1>
+
+    <!-- <h4 class="students">Sumanth</h4>
+    <h4 class="students">Hemanth</h4>
+    <h4 class="students">Uday</h4>
+    <h4 class="students">Naga Sai</h4>
+    <h4 class="students">Vajresh</h4> -->
+
+    <!--
+        2) Update HTML Elements
+
+            element.innerHTML - new HTML element
+            element.attribute - new value element.setAttribute('attr','value') element.getAttribute('attr')
+            element.style.property - new style
+            element.innerText - only for updating text and considers only visible text
+            element.textContent - only for updating text but considers invisible text by CSS
+            parent.insertBefore(created Element, sibling Element) - to insert element before an element. called on parent element
+    -->
+
+    <!-- <h1 id="heading">Welcome</h1> -->
+    <!-- <img src="./images/1.jpg" alt="" height="200px" id="image"> -->
+
+    <!-- <h3 id="text">Hello World</h3> -->
+
+    <!-- <ul id="list">
+        <li>Apple</li>
+        <li id="banana">Banana</li>
+    </ul> -->
+
+    <!-- 
+        3) Create Elements
+
+            createElement('tag') - is used to create an HTML Element
+            createTextNode('text') - is used to place the string in the created element
+    -->
+
+    <!-- <div id="newElement"></div> -->
+    
+    <!--
+        4) Add Elements
+
+            appendChild() - appends a new HTML element to an existing one as a Child Element
+            element.append() - can append text and elements
+            element.prepend() - inserts at beginning    
+    -->
+
+    <!-- <div id="addElement1">Hello</div>
+    <div id="addElement2">Hello</div>
+    <div id="addElement3">Hello</div> -->
+
+    <!-- 
+        5) Replace Elements
+
+            replaceChild('new created element', 'selected element to be replaced') - used for replacing elements and must be called on parent element
+            element.replaceWith() - modern alternative to replaceChild()
+    -->
+
+    <!-- <div id="parent">
+        <div id="old">Old Content</div>
+    </div> -->
+
+    <!-- 
+        6) Delete Elements
+
+            parent.removeChild('selected Element) - to delete an HTML element. called on parent element
+            element.remove() - removes element directly without referencing parent
+    -->
+
+    <!-- <ul id="list">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="mango">Mango</li>
+        <li id="dragonFruit">Dragon Fruit</li>
+    </ul> -->
+
+    <!-- 
+        7) Class Manipulation
+            Add, Remove & Toggle classes from HTML elements:
+            
+            classList: It holds all the classes of an HTML element
+            add() : used to add class (adds class name for an existing HTML element)
+            remove() : removes class name from an existing HTML element
+            toggle() : to toggle a class name (if it exits then removes or else adds a class name to HTML element)
+    -->
+
+    <!-- <ul id="list1" class="big">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="mango">Mango</li>
+        <li id="dragonFruit">Dragon Fruit</li>
+    </ul> -->
+
+    <!-- <ul id="list2" class="">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="mango">Mango</li>
+        <li id="dragonFruit">Dragon Fruit</li>
+    </ul> -->
+
+    <!-- 
+        Useful Properties
+            => childElementCount - returns the no. of child elements
+            => firstElementChild - returns the first element of list
+            => cloneNode(true) - copies element
+    -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
