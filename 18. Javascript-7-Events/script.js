@@ -1,11 +1,11 @@
 ////////////// Example 1: //////////////
 let btn1 = document.getElementById('btn')
 
-// alert('Hi, the button is clicked');
+alert('Hi, the button is clicked');
 
-// btn1.onclick = function() {
-//     alert('Hi, the button is clicked');
-// }
+btn1.onclick = function() {
+    alert('Hi, the button is clicked');
+}
 
 ///////////// Example 2: //////////////
 let btn2 = document.getElementById('btn');

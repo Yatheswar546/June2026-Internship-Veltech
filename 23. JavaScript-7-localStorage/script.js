@@ -38,13 +38,13 @@ let user = {
     age: 25
 }
 
-// localStorage.setItem("userDetails", user);
-// localStorage.setItem("userDetails", JSON.stringify(user))
+localStorage.setItem("userDetails", user);
+localStorage.setItem("userDetails", JSON.stringify(user))
 
-// let data = JSON.parse(localStorage.getItem("userDetails"))
-// console.log(data)
+let data = JSON.parse(localStorage.getItem("userDetails"))
+console.log(data)
 
-// localStorage.clear();
+localStorage.clear();
 
 // ================ Store two variables at a time ================
 
