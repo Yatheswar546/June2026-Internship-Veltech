@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Promises</title>
+</head>
+<body>
+
+    <h1>JavaScript Promises</h1>
+
+    <!-- 
+        Promises - "I Promise a Result !!!"
+
+        A Promise represents a value (output of a request) which is not available now but will be available in the future.
+        It is an object that represents the eventual completion or failure of an asynchronous operation.
+
+        Why Promises?
+        In asynchronous programming:
+            => Code runs in background
+            => We need a way to handle result later
+        Promise solves this problem by giving structured handling of async results.
+
+        ==================================================
+
+        Features of Promise:
+            => A placeholder for a future value
+            => Used to handle asynchronous operations
+            => Helps avoid callback problems
+            => It defers the execution of a code block until an asynchronous request is completed
+
+        ==================================================
+
+        NOTE: Important Correction
+        "Promises have a deterministic value from the very start" ❌
+        A Promise does NOT have the actual value immediately, but its state is predictable (pending → fulfilled/rejected) ✔
+
+        Examples of Promises:
+            => API calls
+            => File reading
+            => Database operations
+
+        ==================================================
+
+        Syntax: 
+
+        const myPromise = new Promise((resolve, reject) => {
+            // Promise body - asynchronous task
+
+            if (success) {
+                resolve("Success");
+            } else {
+                reject("Error");
+            }
+        });
+
+        => Promise constructor has only one argument → a callback function
+
+        => Callback receives two parameters:
+            => resolve() → called when operation is successful
+            => reject() → called when operation fails
+
+        ==================================================
+
+        States of a Promise:
+
+        1) Start
+        2) Pending 
+        3) Fulfilled
+        4) Rejected
+        5) Finished
+
+        (“Start” and “Result” are conceptual, not actual states)
+
+        1. Pending
+            Initial state
+            Waiting for result
+        
+        2. Fulfilled
+            Operation successful
+            resolve() called
+    
+        3. Rejected
+            Operation failed
+            reject() called
+
+        ==================================================
+
+        Two main scenarios on where to use a Promise:
+            => When you create a Promise (Producing code)
+            => When you consume the result of a Promise (Consuming code)
+
+        Producing vs Consuming:
+
+        Producing Code - Code that creates the Promise
+        -------------------
+        const promise = new Promise((resolve, reject) => {
+            resolve("Data Ready");
+        });
+        -------------------
+
+        Consuming Code - Code that uses the Promise result
+        -------------------
+        promise
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+        -------------------
+        
+        When producing code gets result:
+            Success → resolve(result)
+            Failure → reject(error)
+
+        ==================================================
+
+        Handling Promises:
+        then() and catch()
+
+        then() → handles success → RESOLVE
+        catch() → handles error → REJECT
+
+        then() receives data passed to resolve()
+        catch() receives data passed to reject()
+
+        ==================================================
+
+        Example codes on success and failure
+    -->
+
+    <h2>1. Basic Promise (Resolve)</h2>
+    <button onclick="runSuccess()">Run Success</button>
+    <pre id="successOutput"></pre>
+
+    <h2>2. Basic Promise (Reject)</h2>
+    <button onclick="runFailure()">Run Failure</button>
+    <pre id="failOutput"></pre>
+
+    <!-- 
+        Promise Chaining:
+            => Promise chaining is a technique in JavaScript used to execute a sequence of asynchronous tasks one after the other.
+            => When you have multiple asynchronous operations that depend on the result of the previous one, 
+                promise chaining allows you to connect them using .then() blocks. 
+            => This keeps your code clean, readable, and avoids the notorious "Callback Hell" (nested, unreadable code).
+    -->
+
+    <h3>3. Promise Chaining</h3>
+    <button onclick="runChaining()">Run Chain</button>
+    <pre id="chainOutput"></pre>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

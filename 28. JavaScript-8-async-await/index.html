@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Async Await</title>
+</head>
+<body>
+
+    <h1>Async / Await</h1>
+    
+    <!-- 
+        Async / Await - "Makes promises easy to write"
+
+        It is a cleaner and more readable way to handle asynchronous code instead of using .then() and .catch().
+
+        async → makes a function asynchronous and always returns a Promise
+        await → pauses execution until Promise resolves
+    
+        Syntax: 
+
+        Async Function:
+            async function func_name() {
+                // code
+                return "Hello";
+            }
+        => Always returns a Promise
+
+        Await Function:
+            let result = await promise;
+        => Waits until Promise resolves    
+    -->
+
+    <h2>1. Basic Example</h2>
+    <button onclick="basicExample()">Run Basic</button>
+    <pre id="basicOutput"></pre>
+
+    <!-- 
+        Converting Promise to Async/Await:
+
+        Before (then/catch):
+            fetch("URL")
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(err => console.log(err));
+
+        After (async/await):
+            async function getData() {
+                try {
+                    let res = await fetch("URL");
+                    let data = await res.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+
+        =========================
+
+        How to CONVERT any function to ASYNC:
+
+        Step 1  -  Add async keyword
+        Step 2  -  Replace .then() with await
+        Step 3  -  Replace .catch() with try-catch
+    
+    -->
+
+    <h2>2. Check Number (Async/Await)</h2>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="runCheck()">Check</button>
+    <p id="result"></p>
+
+    <!-- 
+        Rules:
+            => async always returns a Promise
+            => await works only inside async function
+            => await pauses execution until Promise resolves
+
+        How Async Works:
+            => async function → returns Promise
+            => await → pauses function
+            => resume after promise resolves
+
+        =========================
+
+        Error Handling (try-catch):
+
+            async function getData() {
+                try {
+                    const res = await fetch("URL");
+                    const data = await res.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+    -->
+
+    <h2>3. Error Handling</h2>
+    <button onclick="getError()">Trigger Error</button>
+    <pre id="errorOutput"></pre>
+
+    <h2>4. API Call using async/await</h2>
+    <button onclick="getPosts()">Get Posts</button>
+    <pre id="apiOutput"></pre>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

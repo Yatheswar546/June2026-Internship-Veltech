@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Networking</title>
+</head>
+<body>
+
+    <h1>Networking & Web APIs</h1>
+
+    <!-- 
+
+    NETWORKING:
+
+        HTTP (HyperText Transfer Protocol)
+        HTTP is a protocol used for communication between a client (frontend) and a server (backend).
+
+        CLIENT (Frontend)  =========>  SERVER (Backend)
+                            Request
+
+        CLIENT (Frontend)  <=========  SERVER (Backend)
+                            Response
+
+        => It is a stateless protocol so each request is independent
+        => Used to transfer data over the web
+        => Works on request-response model
+
+        HTTP Request & Response
+
+        1) Request contains:
+            => Method (GET, POST, etc.)
+            => URL
+            => Headers
+            => Body (optional)
+        
+        2) Response contains:
+            => Status code
+            => Headers
+            => Body (data)
+
+        Structure of URL:
+        https://jsonplaceholder.typicode.com/todos/1
+
+        Part	                        Meaning
+        https	                        Protocol
+        jsonplaceholder.typicode.com	Domain
+        /todos	                        Endpoint
+        /1	                            Resource ID
+
+        HTTP Methods
+        GET	    - Fetch data
+        POST	- Create data
+        PUT	    - Update data
+        DELETE	- Remove data
+    -->
+
+    <!-- <h1>HTTP (HyperText Transfer Protocol)</h1> -->
+
+    <h2>1.Make GET Request</h2>
+    <button onclick="getData()">Fetch Todos</button>
+    <pre id="getResult"></pre>
+
+    <h2>2. Make POST Request</h2>
+    <button onclick="postData()">Create Data</button>
+    <pre id="postResult"></pre>
+
+    <!-- 
+
+        HTTP Status Codes
+
+        1xx – Informational
+        100 Continue
+        101 Switching Protocols
+        102 Processing
+        103 Early Hints
+        
+        2xx – Success
+        200 OK
+        201 Created
+        202 Accepted
+        204 No Content
+        206 Partial Content
+        
+        3xx – Redirection
+        300 Multiple choices
+        301 Moved Permanently
+        304 Not Modified
+        307 Temporary Redirect
+        308 Permanent Redirect
+        
+        4xx – Client Error
+        400 Bad Request
+        401 Unauthorized
+        403 Forbidden
+        404 Not Found
+        409 Not Conflict
+        
+        5xx – Server Error
+        500 Internal Server Error
+        501 Not implemented
+        502 Bad Gateway
+        503 Service Unavailable
+        504 Gateway Timeout
+
+    JavaScript WEB APIs:
+        Web APIs are browser-provided features that allow JavaScript to interact with the browser environment.
+
+        JavaScript alone is synchronous and limited
+        Web APIs give it extra capabilities
+
+        Why Web APIs?
+        JavaScript is synchronous by default.
+
+        console.log("A");
+        console.log("B");
+
+        But real-world apps need:
+            Delays
+            API calls
+            User interactions
+        
+        => Web APIs make this possible
+
+        Web APIs are built-in browser features like:
+            => DOM manipulation
+            => Timers (setTimeout)
+            => HTTP requests (fetch)
+            => Storage (localStorage)
+            => These are not part of core JavaScript
+            => They are provided by the browser
+            => Web APIs are provided by the browser to handle asynchronous operations.
+
+        How Web APIs Work:
+        JavaScript → Web API → Callback Queue → Event Loop → Call Stack
+
+        Common Web APIs:
+
+        1) DOM API:
+            Used to interact with HTML elements.
+
+            document.getElementById("id");
+
+        2) setTimeout():
+            Runs code after delay.
+
+            setTimeout(() => {
+                console.log("Hello");
+            }, 2000);
+        
+        3) Fetch API:
+            Used to make HTTP requests.
+
+            fetch("https://api.com")
+                .then(res => res.json())
+                .then(data => console.log(data));
+
+        4) LocalStorage API:
+            Stores data in browser.
+
+            localStorage.setItem("name", "Yathe");
+            localStorage.getItem("name");
+
+        5) console API:
+            Used for debugging.
+
+            console.log("Hello");
+
+    -->
+
+
+    <h1>Web APIs Demo</h1>
+
+    <h2>1. setTimeout API</h2>
+    <button onclick="runTimeout()">Run setTimeout</button>
+    <pre id="timeoutResult"></pre>
+
+    <h2>2. Fetch API</h2>
+    <button onclick="fetchData()">Fetch Data</button>
+    <pre id="fetchResult"></pre>
+
+    <h3>3. LocalStorage API</h3>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="getData()">Get Data</button>
+    <p id="storageResult"></p>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

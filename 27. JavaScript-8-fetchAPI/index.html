@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - fetchAPI</title>
+</head>
+<body>
+
+    <h1>Fetch API</h1>
+
+    <!-- 
+        Fetch API:
+        fetch returns a Promise that resolves even for HTTP errors, so we must manually check response.ok
+
+            => Used to make HTTP requests (GET, POST, etc.)
+            => It is a Web API
+            => It returns a Promise
+            => FETCH = Create Promise + Process Promise
+
+        ==========================
+
+        Basic Syntax:
+
+            fetch("URL")
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(err => console.log(err));        
+
+        ==========================
+        
+        Important Point:
+            fetch("URL").then(res => res.json());
+
+            res.json() also returns a Promise
+    
+        ==========================
+
+        GET Request:
+
+        fetch("URL")
+            .then(res => res.json())
+            .then(data => console.log(data));
+
+        ==========================
+
+        POST Request:
+
+        fetch("URL", {
+            method: "POST",
+            body: JSON.stringify({ name: "Crio.do" }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(data => console.log(data)); 
+
+        ==========================
+
+        Headers Purpose:
+            Headers provide metadata about request. 
+            These are extra information sent along with a request or response 
+                that helps the browser and server understand how to process the data.
+
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer token"
+            }
+
+            Used for:
+                => content type    - what type of data is being sent
+                => authentication  - who is sending it
+                => caching         - whether the data is cached or not
+
+        ==========================
+
+        Real Flow:
+
+            Frontend → fetch() → Server
+            Server → JSON → response.json() → Data
+
+    -->
+
+    <h2>1. GET Request</h2>
+    <button onclick="getPosts()">Get Posts</button>
+    <pre id="getOutput"></pre>
+
+    <h2>2. POST Request</h2>
+    <button onclick="createPost()">Create Post</button>
+    <pre id="postOutput"></pre>
+
+    <!-- 
+    
+        Error Handling:
+            fetch() doesn't consider 4xx / 5xx as errors because they are not network errors.
+            Because 4xx / 5xx are valid HTTP Response Code
+
+            So, we must use "res.ok", because
+            res.ok returns true -> status 200-299
+                           false -> anything else
+
+            fetch("URL")
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error("HTTP Error " + res.status);
+                    }
+                    return res.json();
+                })
+                .then(data => console.log(data))
+                .catch(err => console.log(err));
+
+            Example Code:
+    -->
+
+    <h2>3. GitHub User Search</h2>
+    <input type="text" id="username" placeholder="Enter GitHub username">
+    <button onclick="searchUser()">Search</button>
+    <pre id="userOutput"></pre>
+
+    <script src="./script.js"></script>
+</body>
+</html>

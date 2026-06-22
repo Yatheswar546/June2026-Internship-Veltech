@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Asynchronous</title>
+</head>
+<body>
+    
+    <h1>Asynchronous Programming</h1>
+
+    <!-- 
+        Asynchronous programming - "I will finish it later!"
+            
+            => It allows JavaScript to run tasks in the background without blocking the main program.
+
+        How Asynchronous programming works ?
+            => Writing code where tasks run in background without stopping the execution of other code.
+            => It allows other work to continue while waiting for results. 
+            => We can refer as functions running in parallel with other functions.
+
+            Example:
+                API calls
+                Timers
+                File operations
+
+        Synchronous vs Asynchronous:
+
+        Example for Each:
+
+    -->
+
+    <h2>1. Synchronous Example</h2>
+    <button onclick="runSync()">Run Sync</button>
+    <pre id="syncOutput"></pre>
+
+    <h2>2. Asynchronous (setTimeout)</h2>
+    <button onclick="runAsync()">Run Async</button>
+    <pre id="asyncOutput"></pre>
+
+    <!-- 
+
+        setTimeout() : Used to delay execution.
+
+        setInterval() : Runs repeatedly after interval.
+
+        Example for setInterval():
+        
+    -->
+
+    <h2>3. setInterval Example</h2>
+    <button onclick="startInterval()">Start Interval</button>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <p id="intervalOutput"></p>
+
+    <!-- 
+
+        Ways to Achieve Asynchronous Programming
+
+        1) Callbacks
+        2) Promises
+        3) Async / Await 
+        4) Timers
+        5) Event Listeners
+
+        ================================
+
+        Important NOTE:
+        
+        JavaScript Engine is:
+            => Single-threaded
+            => Synchronous
+            => It can execute only one line at a time
+            => Asynchronous behavior is possible because of:
+                -> Web APIs
+                -> Event Loop
+    -->
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
