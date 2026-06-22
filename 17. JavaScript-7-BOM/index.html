@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - 7 - BOM</title>
+</head>
+<body>
+    
+    <h1>BOM - Browser Object Model</h1>
+
+    <!-- 
+    
+        DOM is used to control the webpage.
+        BOM is used to control or get information about the browser.
+
+        Example:
+        1) When we change a heading, we are working with the web page (DOM).
+
+        2) When we get the URL, we are working with the browser (BOM).
+
+        Questions: 
+        1) We are working with the browser (BOM).
+
+        2) How does a website know whether you're using Chrome or Edge?
+
+        3) How does Netflix know your screen size?
+
+
+
+        Window Object:
+            Everything in BOM lives inside the browser's main object - window
+
+            Example: window.alert("Hello"); and alert("Hello");
+
+            console.log(window);
+
+                                window
+        ___________________________|___________________________
+        |            |             |             |             |
+     document     location       screen       navigator       history
+
+        1) document Object
+            Represents HTML page
+            Used for DOM manipulation
+
+        2) location Object
+            Location object tells us where we currently are on the internet.
+            
+            window.location.href
+            window.location.hostname
+            window.location.protocol
+            window.location.reload()
+
+        3) screen Object
+            Screen object gives information about the user's monitor.
+
+            window.screen.width
+            window.screen.height
+
+            Example : <h2 id="size"></h2>
+
+        4) navigator Object
+            Navigator gives information about the browser.
+            
+            navigator.userAgent
+            navigator.platform
+            navigator.language
+            navigator.onLine
+
+        5) history Object 
+            History object remembers pages visited in the browser.
+
+            history.back();
+            history.forward();
+
+        Conclusion:
+            DOM is used to interact with the webpage.
+
+            BOM is used to interact with the browser.
+    -->
+    
+    <h2 id="size"></h2>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

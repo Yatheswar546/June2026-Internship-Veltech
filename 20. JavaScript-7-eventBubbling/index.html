@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js - Event Bubbling</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <!-- 
+        Event Bubbling:
+        Event Bubbling is a JavaScript behavior where an event triggered on a child element propagates 
+        upward through its parent elements in the DOM.
+
+        Example Code:
+    -->
+
+    <h1>Event Bubbling Demo</h1>
+    
+    <div id="grandparent">
+        Grandparent
+        <div id="parent">
+            Parent
+            <button id="child">Child - Click Me</button>
+        </div>
+    </div>
+
+    <!--
+        Flow: Child → Parent → Grandparent → Document
+
+        Event Flow Order:
+        JavaScript events follow 3 phases:
+
+        1) Capturing Phase (top → down)
+        2) Target Phase
+        3) Bubbling Phase (bottom → up)
+    -->
+
+    <!--
+        Event Delegation:
+        Event Bubbling allows us to set up an event handler on a parent element that can handle events triggered on it's children.
+        This is known as 'Event Delegation'.
+    
+        Example Code:
+    -->
+    
+    <h1>Event Delegation Demo</h1>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <!--
+        Uses:
+        Better performance
+        Works for dynamic elements
+        Less code
+    -->
+
+    <!--
+        Stopping Event Bubbling: 
+            Js provides a method called 'stopPropagation()' which can stop Event Bubbling when needed.
+        
+        Example Code:
+
+    --> 
+
+
+    <script src="./script.js"></script>
+
+
+</body>
+</html>

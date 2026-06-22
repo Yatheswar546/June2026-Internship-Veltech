@@ -1,0 +1,23 @@
+div {
+    padding: 30px;
+    margin: 10px;
+}
+
+#grandparent {
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+
+#parent {
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+
+#child {
+    background-color: lightpink;
+    border: 2px solid black;
+}
+
+li {
+    font-size: 28px;
+}

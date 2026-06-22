@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - 7 - Events</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body id="body">
+    
+    <h1>JavaScript Events</h1>
+
+    <!-- 
+        Events are actions that happen in a webpage i.e. to HTML Elements.
+        When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+        Examples:
+            Clicking the mouse
+            Hovering
+            Pressing keys
+            Webpage loading
+            Form submission
+            Video controls  
+
+        Types of Events:
+
+        1) Form Events - Form events are triggered when users interact with input fields or submit forms.
+
+            change	-  Triggered when value changes and focus is lost (or) user selects a value from dropdown etc...
+            input	-  Triggered on every keystroke
+            focus	-  Triggered when input is focused
+            blur	-  Triggered when input loses focus
+            submit	-  Triggered when form is submitted
+
+        2) Keyboard Events - Keyboard events are triggered when a user interacts with the keyboard.
+
+            keydown	  - Triggered when key is pressed
+            keyup	  - Triggered when key is released
+            keypress  - Triggered when key is pressed (deprecated)
+
+        3) Mouse Events - Mouse events are triggered when a user interacts with the mouse.
+
+            mousedown  - Triggered when any mouse button is pressed.
+            mouseup    - Triggered when mouse button is released.
+            click      - Triggered when mouse is pressed and released on same element.
+            dblclick   - Triggered when element is double clicked.
+            mouseover  - Triggered when mouse enters element including child elements.
+            mouseenter - Triggered when mouse enters element (not child elements).
+            mousemove  - Triggered when mouse moves over element.
+
+        HTML Event Attributes:
+            Events can be handled directly in HTML using:
+
+            Example: 
+                <button onclick="handleClick()">Click</button>
+
+            * on<event> format is used (like onclick, onmouseover)
+
+        Event Handlers:
+        Event Handlers are functions that execute when an event occurs.
+
+        They can be used to handle and verify user input, user actions and browser actions:
+            =>  Things that should be done every time a page loads
+            =>  Things that should be done when the page is closed
+            =>  Actions that should be performed when a user clicks a button
+            =>  Content that should be verified when a user inputs data.
+            =>  And more.........
+
+        Two Ways of Event Handling:
+
+                   Event Handling Methods
+                   ___________|_____________
+                   |                       |
+             Event Properties     addEventListener()
+
+        1) Event Properties:
+           selectedElement.eventProperty = function() {}
+
+        2) addEventListener()
+            selectedElement.addEventListener(eventName, function(){ } )
+
+    -->
+
+    <!-- Example 1 & 2 -->
+    <button id="btn">Click Me</button>
+
+    <!-- Example 3: -->
+    <button id="btnIncrease">+</button>
+    <button id="">-</button>
+
+    <h3 id="element">Hii</h3>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

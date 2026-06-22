@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavScript - 7 - Error Handling</title>
+</head>
+<body>
+    
+    <h1>JavScript Error Handling</h1>
+
+    <!-- 
+        Error Handling:
+
+        When an error occurs, Js will normally stop, and generate an error message.
+        Error handling is used to handle runtime errors and prevent application crashes.
+
+        => Without error handling:
+            Program stops execution
+            User experience breaks
+
+        => With error handling:
+            Program continues safely
+            Errors are managed
+
+        try / catch / finally:
+        The try/ catch/ finally statements handles some or all errors(wrong input etc...)
+        during the execution of a block of code preventing the program from crashing.
+
+        Syntax:
+        try {
+            // risky code
+        } catch (error) {
+            // handle error
+        } finally {
+            // always runs
+        }
+
+        Example Code:
+    -->
+
+    <h2>Safe JSON Parse</h2>
+    <input type="text" id="jsonInput" placeholder="Enter JSON">
+    <button onclick="parseJSON()">Parse</button>
+    <p id="jsonResult"></p>
+
+    <!-- 
+        throw (Custom Errors): Used to create custom errors.
+
+        Example Code:
+
+    -->
+    <h2>Validate Age</h2>
+    <input type="number" id="validateAge" placeholder="Enter Age">
+    <button onclick="checkAge()">Check Validity</button>
+    <p id="ageResult"></p>
+
+    <!-- 
+        Optional Chaining (?.): Used to safely access nested properties
+
+        Example Code:
+    -->
+
+    <h3>Optional Chaining</h3>
+    <button onclick="checkUser()">Check User</button>
+    <p id="userResult"></p>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

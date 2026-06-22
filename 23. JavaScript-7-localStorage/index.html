@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - 7 - localStorage</title>
+</head>
+<body>
+    
+    <h1>localStorage</h1>
+
+    <!-- 
+        Local Storage:
+        localStorage is a browser storage mechanism that lets you store data in the user's browser permanently (until manually cleared).
+
+        => Data persists even after page refresh or browser restart
+        => Stores data as key-value pairs
+        => Part of the Web Storage API
+        => Stores data only as strings
+
+        Basic Methods:
+        Save Data       - localStorage.setItem("key", "value");
+        Get Data        - localStorage.getItem("key");
+        Remove Data     - localStorage.removeItem("key");
+        Clear All Data  - localStorage.clear();
+
+        Example Codes:
+    -->
+
+    <h1>Save Username</h1>
+    <input type="text" id="username" placeholder="Enter Name:">
+    <button onclick="saveName()">Save</button>
+    <button onclick="getName()">Get</button>
+    <button onclick="removeName()">Remove</button>
+    <p id="usernameOutput"></p>
+
+    <h1>Save Phone Number</h1>
+    <input type="text" id="phone" placeholder="Enter Phone Number:">
+    <button onclick="saveNumber()">Save</button>
+    <button onclick="getNumber()">Get</button>
+    <button onclick="removeNumber()">Remove</button>
+    <p id="phoneOutput"></p>
+
+    <!--
+        Storing Objects:
+        1) Save Object
+        2) Get Object 
+
+        See the script.js
+    -->
+
+    <!-- Example: Store two variables at a time -->
+    <h1>Save Multiple Names</h1>
+    <input type="text" id="users" placeholder="Enter Name:">
+    <button onclick="saveNames()">Save</button>
+    <button onclick="getNames()">Get</button>
+    <button onclick="removeNames()">Remove</button>
+    <p id="usersOutput"></p>
+
+    <!-- 
+        Use Cases:
+        => It is used heavily in production, real-world applications—but only for specific, non-sensitive tasks.
+        => Dark Mode / UI : save light/dark mode so the screen doesn't flicker white when they reload.
+        => Persisting Redux / State: In frameworks like React, if a user refreshes the page, their application state resets. 
+                                    Developers use localStorage to save things like items left in a shopping cart 
+                                    so they don't disappear on a refresh.
+        => Form Drafts: Auto-saving long text inputs (like a blog post draft or a support ticket) 
+                        so the user doesn't lose their work if their browser crashes.
+
+
+        Storage Limits:
+            => Around 5MB (depends on browser)
+            => Not suitable for large data
+
+        Security Concerns:
+            => Accessible via JavaScript
+            => Not safe for sensitive data
+            => Avoid storing passwords, tokens
+    -->
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
